@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Random User</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">RandomUser</div>
+      <ul class="nav-links">
+        <li><a href="./index.html">Utilisateur</a></li>
+        <li><a href="./user.html">Utilisateurs</a></li>
+      </ul>
+    </nav>
+
+    <div class="range-wrapper">
+      <label for="rangeInput">Nombre d'utilisateurs à afficher :</label>
+      <input type="range" id="rangeInput" min="1" max="50" value="5" />
+      <span id="rangeValue">5</span>
+    </div>
+
+    <div class="user-container" id="userContainer">
+      <div class="user-card-flip">
+        <div class="user-card-inner">
+          <div class="user-card user-card-front">
+            <div class="user-header">
+              <img
+                src="https://randomuser.me/api/portraits/men/1.jpg"
+                alt="User Image"
+              />
+              <h2>John Doe</h2>
+            </div>
+            <div class="user-body">
+              <p><span class="highlight">Email :</span> john.doe@example.com</p>
+              <p><span class="highlight">Ville :</span> Paris</p>
+            </div>
+          </div>
+
+          <div class="user-card user-card-back">
+            <p><span class="highlight">Téléphone :</span> 06 12 34 56 78</p>
+            <p><span class="highlight">Adresse :</span> 123 rue Exemple</p>
+            <p><span class="highlight">Naissance :</span> 15/06/1985</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script2.js"></script>
+  </body>
+</html>
