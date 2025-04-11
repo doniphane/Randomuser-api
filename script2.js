@@ -21,7 +21,7 @@ function afficherUtilisateurs(utilisateurs) {
         const cardInner = document.createElement("div");
         cardInner.className = "user-card-inner";
 
-        // Face avant de la carte
+
         const cardFront = document.createElement("div");
         cardFront.className = "user-card-front";
         cardFront.innerHTML = `
@@ -33,7 +33,7 @@ function afficherUtilisateurs(utilisateurs) {
             </div>
         `;
 
-        // Face arrière de la carte
+
         const cardBack = document.createElement("div");
         cardBack.className = "user-card-back";
         cardBack.innerHTML = `
