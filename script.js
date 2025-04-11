@@ -14,7 +14,7 @@ async function chargementutilisateur() {
       <p><span class="highlight">Genre :</span> ${user.gender === 'female' ? 'Féminin' : 'Masculin'}</p>
       <p><span class="highlight">Localisation :</span> ${user.location.city}, ${user.location.country}</p>
       <p><span class="highlight">Téléphone :</span> ${user.phone}</p>
-      <p><span class="highlight">Password :</span> ${user.login.password}</p>
+ 
     `;
     } catch (error) {
         console.error("Erreur dans le chargement de l'api:", error);

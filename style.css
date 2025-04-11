@@ -1,21 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
-  background: linear-gradient(to right, #191919, #ccffff);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .user-card {
-  width: 500px;
+  width: 700px;
+  height: auto;
   background: #fff;
-  border: 5px double #000;
+  border: 5px double #045d7d;
   border-radius: 15px;
   overflow: hidden;
   animation: popIn 1s ease-out forwards;
   transform: scale(0.95);
+  -webkit-box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff,
+    15px 15px 0px 0px #a1d8ff, 20px 20px 0px 0px #cae6ff,
+    25px 25px 0px 0px #e1eeff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff,
+    15px 15px 0px 0px #a1d8ff, 20px 20px 0px 0px #cae6ff,
+    25px 25px 0px 0px #b8c2ce, 5px 5px 15px 5px rgba(20, 19, 19, 0);
   opacity: 0;
 }
 
@@ -32,7 +49,7 @@ h2 {
 .user-header {
   display: flex;
   align-items: center;
-  background: #000;
+  background: #04a2b3;
   color: #fff;
   padding: 10px;
   border-bottom: 4px dashed #fff;
