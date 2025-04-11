@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Quicksand:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 72%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  padding: 2rem;
+  color: #f3e9ff;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid #c499f3;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.nav-logo {
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f9e0ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffd6ff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffbeff;
+}
+
+.range-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffe6f9;
+}
+
+#rangeInput {
+  width: 60%;
+  appearance: none;
+  height: 8px;
+  background: #d3aaff;
+  border-radius: 4px;
+  outline: none;
+}
+
+#rangeInput::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #8f00ff;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#rangeValue {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffd6ff;
+  margin-top: 0.5rem;
+}
+
+.user-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.user-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  width: 280px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(175, 103, 255, 0.2);
+  text-align: center;
+}
+
+.user-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.user-header img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffb3ec;
+  margin-bottom: 0.8rem;
+}
+
+.user-header h2 {
+  font-size: 1.3rem;
+  color: #ffdaff;
+  font-family: "Cinzel", serif;
+  margin-bottom: 0.3rem;
+}
+
+.user-body p {
+  font-size: 0.95rem;
+  color: #f1d6ff;
+  margin: 0.4rem 0;
+  padding-left: 0.5rem;
+  border-left: 3px solid #f084ff;
+  text-align: left;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ff88cc;
+}
+
+.user-card-flip {
+  perspective: 1000px;
+  width: 280px;
+  height: 360px;
+}
+
+.user-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.user-card-flip:hover .user-card-inner {
+  transform: rotateY(180deg);
+}
+
+.user-card-front,
+.user-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(175, 103, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.user-card-front {
+  z-index: 2;
+}
+
+.user-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(145deg, #c163ff, #7a00cc);
+  color: #ffe6ff;
+  font-family: "Cinzel", serif;
+  font-size: 1.3vw;
+}
